@@ -1,8 +1,16 @@
 /* Notes */
 
-.gtr-note[data-natural]:before { content: attr(data-natural);  }
-.gtr-note[data-sharp="true"]:after { content: '♯';  }
-.gtr-note[data-flat="true"]:after { content: '♭';  }
+.gtr-note[data-natural]:before {
+    content: attr(data-natural);
+}
+
+.gtr-note[data-sharp="true"]:after {
+    content: '♯';
+}
+
+.gtr-note[data-flat="true"]:after {
+    content: '♭';
+}
 
 /* Fret numbers */
 
@@ -36,11 +44,11 @@
     display: flex;
 }
 
-
 .gtr-guitar.gtr-vertical,
 .gtr-guitar.gtr-vertical .gtr-fretboard {
     display: flex;
 }
+
 .gtr-guitar.gtr-vertical .gtr-fretboard {
     flex-direction: row-reverse;
 }
@@ -121,6 +129,7 @@
 .gtr-fret-numbers {
     font-size: 1.3em;
 }
+
 .gtr-fret-dots {
     font-size: 1.8em;
 }

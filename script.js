@@ -2,7 +2,7 @@
 
 $(function () {
     var audioCtx = new window.AudioContext();
-    var playNote = function(frequency) {
+    var playNote = function (frequency) {
         var gain = audioCtx.createGain();
         gain.connect(audioCtx.destination);
 
@@ -22,7 +22,7 @@ $(function () {
                 '.gtr-note[data-fret="' + fret + '"]'
             ).addClass('selected');
         });
-        $gtr.click(function() {
+        $gtr.click(function () {
             $gtr.find('.gtr-note.selected').sort(function (a, b) {
                 return $(a).data('note-index') > $(b).data('note-index');
             }).each(function (index, note) {
