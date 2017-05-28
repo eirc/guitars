@@ -16,15 +16,15 @@ h1, h2 {
     color: transparent;
 }
 
-.gtr-guitar.naturals-gsharp .gtr-note[data-sharp="false"][data-natural="G"],
-.gtr-guitar.naturals-gsharp .gtr-note[data-sharp="true"]:not([data-natural="G"]) {
+.gtr-guitar.gsharp .gtr-note[data-sharp="false"][data-natural="G"],
+.gtr-guitar.gsharp .gtr-note[data-sharp="true"]:not([data-natural="G"]) {
     background-color: #EAC16E;
     color: transparent;
 }
 
-#guitar3 .gtr-note[data-sharp="false"][data-natural="F"],
-#guitar3 .gtr-note[data-sharp="false"][data-natural="G"],
-#guitar3 .gtr-note[data-sharp="true"]:not([data-natural="F"]):not([data-natural="G"]) {
+.gtr-guitar.fsharp-gsharp .gtr-note[data-sharp="false"][data-natural="F"],
+.gtr-guitar.fsharp-gsharp .gtr-note[data-sharp="false"][data-natural="G"],
+.gtr-guitar.fsharp-gsharp .gtr-note[data-sharp="true"]:not([data-natural="F"]):not([data-natural="G"]) {
     background-color: #EAC16E;
     color: transparent;
 }
