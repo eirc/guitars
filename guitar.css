@@ -1,0 +1,126 @@
+/* Notes */
+
+.gtr-note[data-natural]:before { content: attr(data-natural);  }
+.gtr-note[data-sharp="true"]:after { content: '♯';  }
+.gtr-note[data-flat="true"]:after { content: '♭';  }
+
+/* Fret numbers */
+
+.gtr-fret-numbers [data-fret]:before {
+    content: attr(data-fret);
+}
+
+/* Fret dots */
+
+.gtr-fret-dots [data-fret="3"]:after,
+.gtr-fret-dots [data-fret="5"]:after,
+.gtr-fret-dots [data-fret="7"]:after,
+.gtr-fret-dots [data-fret="9"]:after,
+.gtr-fret-dots [data-fret="15"]:after,
+.gtr-fret-dots [data-fret="17"]:after,
+.gtr-fret-dots [data-fret="19"]:after,
+.gtr-fret-dots [data-fret="21"]:after {
+    content: '•';
+}
+
+.gtr-fret-dots [data-fret="12"]:after,
+.gtr-fret-dots [data-fret="24"]:after {
+    content: '• •';
+}
+
+/* Layout */
+
+.gtr-guitar.gtr-horizontal .gtr-fret-numbers,
+.gtr-guitar.gtr-horizontal .gtr-string,
+.gtr-guitar.gtr-horizontal .gtr-fret-dots {
+    display: flex;
+}
+
+
+.gtr-guitar.gtr-vertical,
+.gtr-guitar.gtr-vertical .gtr-fretboard {
+    display: flex;
+}
+.gtr-guitar.gtr-vertical .gtr-fretboard {
+    flex-direction: row-reverse;
+}
+
+.gtr-guitar.gtr-horizontal .gtr-fret-number,
+.gtr-guitar.gtr-horizontal .gtr-note,
+.gtr-guitar.gtr-horizontal .gtr-fret-dot {
+    height: 30px;
+    line-height: 30px;
+    width: 38px;
+}
+
+.gtr-guitar.gtr-vertical .gtr-fret-number,
+.gtr-guitar.gtr-vertical .gtr-note,
+.gtr-guitar.gtr-vertical .gtr-fret-dot {
+    height: 35px;
+    line-height: 35px;
+    width: 36px;
+}
+
+/* Note borders */
+
+.gtr-guitar .gtr-note {
+    border-color: black;
+    border-style: solid;
+    border-width: 0;
+    box-sizing: border-box;
+}
+
+.gtr-guitar.gtr-horizontal .gtr-note {
+    border-top-width: 1px;
+    border-right-width: 2px;
+}
+
+.gtr-guitar.gtr-horizontal .gtr-note:first-child {
+    border-left-width: 1px;
+}
+
+.gtr-guitar.gtr-horizontal .gtr-note:last-child {
+    border-right-width: 1px;
+}
+
+.gtr-guitar.gtr-horizontal .gtr-string:last-child .gtr-note {
+    border-bottom-width: 1px;
+}
+
+.gtr-guitar.gtr-horizontal .gtr-note[data-fret="0"] {
+    border-right-width: 4px;
+}
+
+.gtr-guitar.gtr-vertical .gtr-note {
+    border-right-width: 1px;
+    border-bottom-width: 2px;
+}
+
+.gtr-guitar.gtr-vertical .gtr-string:last-child .gtr-note {
+    border-left-width: 1px;
+}
+
+.gtr-guitar.gtr-vertical .gtr-note:last-child {
+    border-bottom-width: 1px;
+}
+
+.gtr-guitar.gtr-vertical .gtr-note:first-child {
+    border-top-width: 1px;
+}
+
+.gtr-guitar.gtr-vertical .gtr-note[data-fret="0"] {
+    border-bottom-width: 4px;
+}
+
+/* Prettify */
+
+.gtr-note, .gtr-fret-dot, .gtr-fret-number {
+    text-align: center;
+}
+
+.gtr-fret-numbers {
+    font-size: 1.3em;
+}
+.gtr-fret-dots {
+    font-size: 1.8em;
+}

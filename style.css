@@ -1,0 +1,49 @@
+/*html, body {*/
+    /*height: 100%;*/
+/*}*/
+
+
+h1, h2 {
+    text-align: center;
+}
+
+.gtr-note {
+    background-color: #F2D9A6;
+}
+
+.gtr-guitar.naturals .gtr-note[data-sharp="true"] {
+    background-color: #EAC16E;
+    color: transparent;
+}
+
+.gtr-guitar.naturals-gsharp .gtr-note[data-sharp="false"][data-natural="G"],
+.gtr-guitar.naturals-gsharp .gtr-note[data-sharp="true"]:not([data-natural="G"]) {
+    background-color: #EAC16E;
+    color: transparent;
+}
+
+#guitar3 .gtr-note[data-sharp="false"][data-natural="F"],
+#guitar3 .gtr-note[data-sharp="false"][data-natural="G"],
+#guitar3 .gtr-note[data-sharp="true"]:not([data-natural="F"]):not([data-natural="G"]) {
+    background-color: #EAC16E;
+    color: transparent;
+}
+
+.gtr-note:hover {
+    background-color: #E0A124;
+    cursor: pointer;
+}
+
+.gtr-note.selected {
+    background-color: #EAC16E;
+}
+
+/*.note.G { background-color: #E0A124; }*/
+/*.note.G.sharp { background-color: transparent; }*/
+
+/*!*.note { color: transparent; }*!*/
+/*.note[data-natural="G"][data-sharp="true"] {*/
+    /*color: transparent;*/
+/*}*/
+
+/*.note.A.natural { color: black; }*/
